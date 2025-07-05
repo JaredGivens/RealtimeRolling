@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj5slpvgud1xp"]
+
+[ext_resource type="Script" uid="uid://qst4wllog73f" path="res://arena/Arena.cs" id="1_dotur"]
+[ext_resource type="PackedScene" uid="uid://qh4y6lt5wtu7" path="res://scene/player.tscn" id="3_0gwdx"]
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_dotur")
+
+[node name="Player" parent="." instance=ExtResource("3_0gwdx")]

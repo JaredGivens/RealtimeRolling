@@ -1,0 +1,13 @@
+<svg width="64" height="16" viewBox="0 0 64 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black vertical line on the left edge -->
+  <rect x="0" y="0" width="1" height="16" fill="#000000" />
+  <!-- Black horizontal line on the bottom edge -->
+  <rect x="0" y="15" width="64" height="1" fill="#000000" />
+  <!-- Quarter 1 (0-16) -->
+  <rect x="16" y="8" width="1" height="8" fill="#000000" />
+  <!-- Quarter 2 (16-32) -->
+  <rect x="32" y="8" width="1" height="8" fill="#000000" />
+  <!-- Quarter 3 (32-48) -->
+  <rect x="48" y="8" width="1" height="8" fill="#000000" />
+</svg>
+

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://drf5y1luajrnp"]
+
+[ext_resource type="Script" uid="uid://c85ir6b0km4kg" path="res://scene/Hero.cs" id="1_s32td"]
+[ext_resource type="Texture2D" uid="uid://87sgrksnph8n" path="res://svg/ticks.svg" id="2_s32td"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s32td"]
+radius = 32.0
+
+[sub_resource type="Gradient" id="Gradient_r065v"]
+colors = PackedColorArray(0.69, 0, 0, 1, 1, 0.26, 0.26, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jr182"]
+gradient = SubResource("Gradient_r065v")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[node name="Hero" type="CollisionShape2D" node_paths=PackedStringArray("Sprite", "HealthBar", "ManaBar")]
+shape = SubResource("CircleShape2D_s32td")
+script = ExtResource("1_s32td")
+Sprite = NodePath("Polygon2D")
+HealthBar = NodePath("VBoxContainer/Health")
+ManaBar = NodePath("VBoxContainer/Mana")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(32, 32)
+polygon = PackedVector2Array(-0.866, -0.5, 0, 1, 0.866, -0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = -61.0
+offset_top = -91.0
+offset_right = -21.0
+offset_bottom = -51.0
+
+[node name="Health" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+texture_progress = SubResource("GradientTexture2D_jr182")
+
+[node name="Mana" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+texture_over = ExtResource("2_s32td")

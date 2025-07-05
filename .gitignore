@@ -1,0 +1,46 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+export/
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# C# / .NET specific files
+.vs/
+bin/
+obj/
+.mono/ # Explicitly ignore, though often covered by .godot/
+*.csproj.user
+*.resharper
+*.suo
+*.user
+*.log
+*.bak
+
+# Build artifacts for various targets (ensure all bin/obj are caught)
+# This catches things like .godot/mono/temp/bin/ and .godot/mono/temp/obj/
+**/bin/
+**/obj/
+
+# Rider IDE specific files
+.idea/
+*.sln.DotSettings
+*.csproj.DotSettings
+
+# VS Code specific (optional, remove if you want to share workspace settings)
+.vscode/
+
+# Export templates / build exports
+*.zip
+*.pck

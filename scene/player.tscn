@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://qh4y6lt5wtu7"]
+
+[ext_resource type="Script" uid="uid://bc5g0vi8v4qv1" path="res://scene/Player.cs" id="1_hjaqi"]
+[ext_resource type="PackedScene" uid="uid://drf5y1luajrnp" path="res://scene/hero.tscn" id="2_fvtld"]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_hero", "_camera")]
+script = ExtResource("1_hjaqi")
+_hero = NodePath("Hero")
+_camera = NodePath("Camera2D")
+
+[node name="Hero" parent="." instance=ExtResource("2_fvtld")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
