@@ -23,8 +23,8 @@ public partial class Player : CharacterBody2D
         var velocity = new Vector2();
         if (Input.IsActionPressed("move_up")) velocity += aimDirection; // Move toward mouse
         if (Input.IsActionPressed("move_down")) velocity -= aimDirection; // Move away from mouse
-        if (Input.IsActionPressed("move_left")) velocity += new Vector2(-aimDirection.Y, aimDirection.X); // Strafe left
-        if (Input.IsActionPressed("move_right")) velocity += new Vector2(aimDirection.Y, -aimDirection.X); // Strafe right
+        if (Input.IsActionPressed("move_left")) velocity += new Vector2(aimDirection.Y, -aimDirection.X); // Strafe left
+        if (Input.IsActionPressed("move_right")) velocity += new Vector2(-aimDirection.Y, aimDirection.X); // Strafe right
 
 
         // Normalize velocity to prevent faster diagonal movement

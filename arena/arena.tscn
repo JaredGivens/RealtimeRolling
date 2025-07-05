@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://qst4wllog73f" path="res://arena/Arena.cs" id="1_dotur"]
 [ext_resource type="PackedScene" uid="uid://qh4y6lt5wtu7" path="res://scene/player.tscn" id="3_0gwdx"]
 
-[node name="Arena" type="Node2D"]
+[node name="Arena" type="Node2D" node_paths=PackedStringArray("_player")]
 script = ExtResource("1_dotur")
+_player = NodePath("Player")
 
 [node name="Player" parent="." instance=ExtResource("3_0gwdx")]
